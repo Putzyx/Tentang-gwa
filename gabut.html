@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Tentang Putra</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+      background-color: #C0C0C0;
+    }
+
+    .question {
+      background-color: #000;
+      color: white;
+      padding: 15px;
+      margin-bottom: 10px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .answer {
+      display: none;
+      padding: 15px 10px;
+      background-color: #ecf0f1;
+      border-left: 4px solid #000;
+      margin-bottom: 10px;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>&#x2728Tentang Putra</h1>
+
+  <div class="question" onclick="toggleAnswer(0)">Apa Makanan Favorit saya?</div>
+  <div class="answer">Mie Ayam.</div>
+
+  <div class="question" onclick="toggleAnswer(1)">Apa Hobi saya?</div>
+  <div class="answer">Belajar Coding / Bersepeda.</div>
+
+  <div class="question" onclick="toggleAnswer(2)">Apa cita-cita saya?</div>
+  <div class="answer">Software Engineer / Cyber Security.</div>
+
+  <script>
+    function toggleAnswer(index) {
+      const answers = document.querySelectorAll('.answer');
+
+      answers.forEach((ans, i) => {
+        if (i === index) {
+          ans.style.display = ans.style.display === 'block' ? 'none' : 'block';
+        } else {
+         ans.style.display = 'none';
+        }
+      });
+    }
+  </script>
+
+</body>
+</html>
